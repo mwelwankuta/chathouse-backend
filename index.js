@@ -11,7 +11,7 @@ app.use(express.json())
 const PORT = process.env.PORT || 3002
 
 const server = app.listen(PORT, () => {
-  console.log("Server Running on Port 3002...")
+  console.log("Server Running on Port...", PORT)
 })
 
 const io = new Server(server, {cors: {origin: "*"}})
