@@ -1,7 +1,7 @@
-import express from "express"
-import { Server } from "socket.io"
-import cors from "cors"
-import IOConnection from './socket/socket.js'
+const express = require ("express")
+const socket = require ("socket.io")
+const cors = require ("cors")
+const IOConnection = require ('./socket/socket.js')
 
 const app = express()
 
@@ -14,7 +14,7 @@ const server = app.listen(PORT, () => {
   console.log("Server Running on Port...", PORT)
 })
 
-const io = new Server(server, {cors: {origin: "*"}})
+const io = socket(server, {cors: {origin: "*"}})
 
 IOConnection(io) // socket.io 
 

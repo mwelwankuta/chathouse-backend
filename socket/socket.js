@@ -1,4 +1,3 @@
-
 const IoConnection = (io) => {
     io.on("connection", (socket) => {
         console.log(socket.id, 'Connected')
@@ -25,4 +24,4 @@ const IoConnection = (io) => {
 
 }
 
-export default IoConnection
+module.exports = IoConnection
