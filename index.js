@@ -19,5 +19,5 @@ const io = socket(server, {cors: {origin: "*"}})
 IOConnection(io) // socket.io 
 
 app.get('/', (req, res) => {
-  res.status(200).send('Server running ')
+  res.status(200).send(`Server running on ${PORT}`)
 })
